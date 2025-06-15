@@ -12,7 +12,7 @@ function Decision() {
             <GeneralHeader headerText="Logged in as Doctor at Medibridge."/>
             <div className="flex p-1">
                 <DecisionCard icon={<Search />} action="Find Patient Record" onClick={() => router.push("/home/patients")}/>
-                <DecisionCard icon={<User fill="#312e81" size={20}/> } action="Register a patient"  onClick={() => router.push("/home/patients")}/>
+                <DecisionCard icon={<User fill="#312e81" size={20}/> } action="Register a patient"  onClick={() => router.push("/home/register")}/>
             </div>
         </div>
     )

@@ -40,7 +40,7 @@ function Signin() {
             );
             if (response.ok) {
                 console.log("ok")
-                router.push("/home/patients");
+                router.push("/home/decision");
             } else if(response.status === 404) {
                 console.log("not registered")
                 router.push("/home/signup");
