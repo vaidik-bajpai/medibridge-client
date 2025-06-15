@@ -5,6 +5,7 @@ import SearchBar from "../../../../components/SearchBar";
 import GeneralHeader from "../../../../components/GeneralHeader";
 import NavigationButton from "../../../../components/NavigationButton";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface PatientItem {
     id: string
@@ -31,6 +32,7 @@ interface PatientsList {
 }
 
 function PatientsList() {
+    const router = useRouter();
     const [listPatients, setListPatients] = useState<PatientsList>({
         patients: [],
         meta: {
@@ -92,11 +94,13 @@ function PatientsList() {
                     {
                         listPatients.patients.map((p) => (
                             <PatientListItem
+                                key={p.id}
                                 id={p.id}
                                 fullname={p.fullName}
                                 gender={p.gender[0]}
                                 age={p.age}
                                 dob={p.dob}
+                                onClick={() => router.push(`/home/patient/${p.id}`)}
                             />
                         ))
                     }
