@@ -28,7 +28,7 @@ function Signin() {
     const onSubmit: SubmitHandler<IFormInput> = async (data) => {
         try {
             const response = await fetch(
-                "http://localhost:8080/v1/signin",
+                "http://localhost:8080/v1/user/signin",
                 {
                     method: "POST",
                     headers: {

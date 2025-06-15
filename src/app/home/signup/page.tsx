@@ -33,7 +33,7 @@ function Signup() {
         console.log("Form data to be sent to backend:", data);
         try {
             const response = await fetch(
-                "http://localhost:8080/v1/signup",
+                "http://localhost:8080/v1/user/signup",
                 {
                     method: "POST",
                     headers: {
@@ -47,7 +47,7 @@ function Signup() {
                 console.log("ok")
                 router.push("/home/signin");
             } else {
-                console.error("Failed to sign in");
+                console.error("Failed to sign up");
             }
         } catch(err) {
             console.log(err)
