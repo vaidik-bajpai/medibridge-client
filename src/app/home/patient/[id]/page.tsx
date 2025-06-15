@@ -2,7 +2,6 @@
 
 import { useRecord } from "@/context/RecordContext";
 import PatientSubHeader from "../../../../../components/PatientSubHeader";
-import { format } from "path";
 import { formatDOB } from "../../../../../utils/dateFormat";
 
 const Patient = () => {
